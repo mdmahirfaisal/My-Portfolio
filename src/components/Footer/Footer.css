@@ -1,0 +1,30 @@
+.footer-section{
+    background-color:#1e272e;
+    margin-top: 200px;
+    transition:ease-in-out 0.5s;
+}
+.footer-section:hover{
+    background-color:#232e37;
+}
+
+.footer-icon{
+    background-color: rgba(253, 255, 237, 0.686);
+    padding: 8px;
+    border-radius: 8px;
+    transition:ease-in-out 0.5s;
+}
+.footer-icon:hover{
+    background-color: rgb(34, 26, 68);
+    color: rgb(199, 0, 209);
+}
+.footer-link{
+    color: rgb(153, 153, 153);
+    transition:ease-in-out 0.5s;
+}
+.footer-link:hover{
+    color: rgb(255, 32, 32);
+}
+
+@media screen and (max-width: 520px) {
+    
+  }

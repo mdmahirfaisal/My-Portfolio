@@ -2,6 +2,19 @@
     background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://i.ibb.co/FJVTFny/Lightened-luxury-sedan-car-in-darkness-with-headlamps-and-rear-lights-lit-realistic-image-reflection.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   background-position: center;
   background-attachment: fixed;
+}
+.about-text{
+  background-color: rgba(227, 255, 249, 0.268);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-section{
+      height: 100%;
+  }
 }

@@ -9,6 +9,7 @@ import Projects from "./components/Projects/Projects";
 import NotFound from "./components/NotFound/NotFound";
 import Navigation from "./components/Navigaton/Navigation";
 import ProjectDetails from "./components/ProjectDetails/ProjectDetails";
+import Blogs from "./components/Blogs/Blogs";
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
 
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/blogs">
+            <Blogs></Blogs>
           </Route>
 
           <Route path="/footer">

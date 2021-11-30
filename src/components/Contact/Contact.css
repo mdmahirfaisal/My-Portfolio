@@ -1,0 +1,14 @@
+.contact-section{
+    background:linear-gradient(rgba(0, 0, 0, 0.604), rgba(0, 0, 0, 0.604)), url('https://i.ibb.co/mXcdRbQ/Minimal-globe-technology-business-vector-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 520px) {
+    .contact-section{
+        height: 100%;
+    }
+  }

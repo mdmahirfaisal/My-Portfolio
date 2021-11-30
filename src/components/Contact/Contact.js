@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Contact.css';
 import TextField from '@mui/material/TextField';
 import { Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
@@ -28,7 +28,7 @@ const Contact = () => {
 
     return (
         <>
-            <section id="contact" style={{ backgroundColor: '#273c75' }}>
+            <section id="contact" className="contact-section">
                 <h1 className="fw-bold text-primary pt-5">CONTACT ME</h1>
                 <div className="container">
                     <div className="mx-auto p-5" style={{ maxWidth: '800px' }}>

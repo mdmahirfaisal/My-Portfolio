@@ -12,6 +12,8 @@ import food3 from './project-image/restaurant-3.PNG';
 import medical1 from './project-image/medical-care-2.PNG';
 import medical2 from './project-image/medical-care.PNG';
 import medical3 from './project-image/medical-care-3.PNG';
+import Fade from 'react-reveal/Fade';
+
 
 
 
@@ -85,7 +87,9 @@ const Projects = () => {
         <>
             <section id="projects" style={{ backgroundColor: '#192a56' }}>
                 <div>
-                    <h1 className="text-primary fw-bold pt-5">MY PROJECTS</h1>
+                    <Fade bottom duration={3000} distance="250px">
+                        <h1 className="text-primary fw-bold pt-5">MY PROJECTS</h1>
+                    </Fade>
                     <div className="container">
                         <div className="row d-md-flex align-items-center justify-content-center">
                             {projectsData.map(project => <ProjectInfo
