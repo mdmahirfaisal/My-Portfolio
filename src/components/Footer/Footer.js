@@ -20,17 +20,16 @@ const Footer = () => {
                                 ">
                                     Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
                                 </Card.Text>
-                                <h3 className="text-light text-start">Follow us</h3>
-                                <div className=" d-flex align-items-center">
+                                <Card.Title className="text-light text-start">Follow us</Card.Title>
 
-                                    <Nav.Link as="a" href={`https://www.facebook.com/profile.php?id=100069936932811`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3" ><i className="fab fa-facebook footer-icon"></i></Nav.Link>
+                                <Nav.Link as="a" href={`https://www.facebook.com/profile.php?id=100069936932811`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3 fo-icon-link d-inline" ><i className="fab fa-facebook footer-icon"></i></Nav.Link>
 
-                                    <Nav.Link as="a" href={`https://github.com/mdmahirfaisal`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3" ><i className="fab fa-github footer-icon"></i></Nav.Link>
+                                <Nav.Link as="a" href={`https://github.com/mdmahirfaisal`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3 fo-icon-link d-inline" ><i className="fab fa-github footer-icon"></i></Nav.Link>
 
-                                    <Nav.Link as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3" ><i className="fab fa-google footer-icon"></i></Nav.Link>
+                                <Nav.Link as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3 fo-icon-link d-inline" ><i className="fab fa-google footer-icon"></i></Nav.Link>
 
-                                    <Nav.Link as="a" href={`https://www.linkedin.com/in/mahir-faisal/`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3" ><i className="fab fa-linkedin-in footer-icon"></i></Nav.Link>
-                                </div>
+                                <Nav.Link as="a" href={`https://www.linkedin.com/in/mahir-faisal/`} target="_blank" rel="noopener noreferrer" className="mx-1 text-decoration-none fs-3 fo-icon-link d-inline" ><i className="fab fa-linkedin-in footer-icon"></i></Nav.Link>
+                                {/* <div className=" d-flex align-items-center flex-wrap"> */}
                             </Card.Body>
                         </Card>
                     </div>

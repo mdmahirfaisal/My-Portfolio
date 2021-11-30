@@ -7,13 +7,14 @@
     background-color:#232e37;
 }
 
-.footer-icon{
+.fo-icon-link{
     background-color: rgba(253, 255, 237, 0.686);
     padding: 8px;
+    margin: 10px 2px;
     border-radius: 8px;
     transition:ease-in-out 0.5s;
 }
-.footer-icon:hover{
+.fo-icon-link:hover{
     background-color: rgb(34, 26, 68);
     color: rgb(199, 0, 209);
 }
