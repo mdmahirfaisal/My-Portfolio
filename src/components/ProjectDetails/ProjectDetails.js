@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectInfo from '../ProjectInfo/ProjectInfo';
+import './ProjectDetails.css';
+import { useParams } from 'react-router';
 import car1 from './project-image/car-shop.PNG';
 import car2 from './project-image/car-shop-2.PNG';
 import car3 from './project-image/car-shop-3.PNG';
@@ -12,10 +13,7 @@ import food3 from './project-image/restaurant-3.PNG';
 import medical1 from './project-image/medical-care-2.PNG';
 import medical2 from './project-image/medical-care.PNG';
 import medical3 from './project-image/medical-care-3.PNG';
-
-
-
-
+import { Card, Carousel, Nav } from 'react-bootstrap';
 
 
 
@@ -80,24 +78,60 @@ const projectsData = [
     }
 ];
 
-const Projects = () => {
+
+const ProjectDetails = () => {
+    const { projectId } = useParams()
+
+    const singleProject = projectsData.filter(proData => proData.id == projectId);
+    console.log(singleProject[0])
+    const { name, img1, img2, img3, details, live, code } = singleProject[0];
+
     return (
-        <>
-            <section id="projects" style={{ backgroundColor: '#192a56' }}>
-                <div>
-                    <h1 className="text-primary fw-bold pt-5">MY PROJECTS</h1>
-                    <div className="container">
-                        <div className="row d-md-flex align-items-center justify-content-center">
-                            {projectsData.map(project => <ProjectInfo
-                                key={project.name}
-                                project={project}
-                            ></ProjectInfo>)}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
+        <section className="detail-body">
+            <div className="container ">
+                <h1 className="fw-bold text-primary">PROJECT DETAILS</h1>
+                <Card className="h-100 border-0 shadow p-3 mx-auto detail-card">
+                    <Carousel fade style={{ borderRadius: '20px' }}>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={img1}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={img2}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={img3}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                        <Card.Text>
+                            {details}
+                        </Card.Text>
+
+                        <Nav.Link as="a" href={`${live}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-danger rounded-pill py-1 w-100 ">Live Site</button></Nav.Link>
+                        <Nav.Link as="a" href={`${code}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-info rounded-pill py-1 w-100 ">Github Code</button></Nav.Link>
+
+                    </Card.Body>
+                </Card>
+
+
+
+            </div>
+
+        </section>
     );
 };
 
-export default Projects;
+export default ProjectDetails;
