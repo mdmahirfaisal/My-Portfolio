@@ -63,8 +63,8 @@ const projectsData = [
          To Order any of the Food, first, the user will be taken to the login page and after logging in he will be taken
         back to the place order page and from there he will be able to order the food.
          On the My Order page,`,
-        live: 'https://water-delivery-b84a1.web.app/',
-        code: 'https://github.com/mdmahirfaisal/Water-delivery'
+        live: 'https://new-star-restuarant.netlify.app/',
+        code: 'https://github.com/mdmahirfaisal/New-Star-Restaurant'
     },
     {
         name: 'MEDICAL CARE CENTER',
