@@ -24,7 +24,7 @@ const ProjectInfo = ({ project }) => {
                             <div className="content" style={{ cursor: 'pointer', borderRadius: '10px' }}>
                                 <div className="icon" >
                                     <Carousel>
-                                        <Carousel.Item interval={1800}>
+                                        <Carousel.Item interval={2800}>
                                             <img style={{ maxHeight: '270px' }}
                                                 className="d-block w-100"
                                                 src={img1}
@@ -32,7 +32,7 @@ const ProjectInfo = ({ project }) => {
                                             />
 
                                         </Carousel.Item>
-                                        <Carousel.Item interval={2500}>
+                                        <Carousel.Item interval={3500}>
                                             <img style={{ maxHeight: '270px' }}
                                                 className="d-block w-100"
                                                 src={img2}
@@ -40,7 +40,7 @@ const ProjectInfo = ({ project }) => {
                                             />
 
                                         </Carousel.Item>
-                                        <Carousel.Item interval={2000}>
+                                        <Carousel.Item interval={4000}>
                                             <img style={{ maxHeight: '270px' }}
                                                 className="d-block w-100"
                                                 src={img3}

@@ -34,7 +34,7 @@ const Contact = () => {
         <>
             <section id="contact" className="contact-section">
                 <Fade bottom duration={3000} distance="250px">
-                    <h1 className="fw-bold text-primary pt-5">CONTACT ME</h1>
+                    <h1 className="fw-bold text-light pt-5">CONTACT ME</h1>
                 </Fade>
                 <div className="container">
                     <div className="mx-auto p-5" style={{ maxWidth: '800px' }}>

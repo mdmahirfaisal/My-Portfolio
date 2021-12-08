@@ -11,7 +11,7 @@ const About = () => {
         <>
             <section id="about" className="about-section" style={{}}>
                 <Fade bottom duration={2000} distance="100px">
-                    <h1 className="fw-bold text-primary pt-5">ABOUT ME</h1>
+                    <h1 className="fw-bold text-light pt-5">ABOUT ME</h1>
                 </Fade>
                 <div className="container">
                     <div className="row d-md-flex align-items-center">

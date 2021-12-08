@@ -46,8 +46,8 @@ const projectsData = [
         back to the place order page and from there he will be able to book the service.
          On the My Order page, the user will see his order list. Manage orders can change the status of the service on
         the page and delete any order. It is a CRUD operation.`,
-        live: 'https://new-star-restuarant.netlify.app/',
-        code: 'https://github.com/mdmahirfaisal/New-Star-Restaurant'
+        live: 'https://water-delivery-b84a1.web.app/',
+        code: 'https://github.com/mdmahirfaisal/Water-delivery'
     },
     {
         name: 'NEW STAR RESTAURANT',
@@ -59,8 +59,8 @@ const projectsData = [
          To Order any of the Food, first, the user will be taken to the login page and after logging in he will be taken
         back to the place order page and from there he will be able to order the food.
          On the My Order page,`,
-        live: 'https://water-delivery-b84a1.web.app/',
-        code: 'https://github.com/mdmahirfaisal/Water-delivery'
+        live: 'https://new-star-restuarant.netlify.app/',
+        code: 'https://github.com/mdmahirfaisal/New-Star-Restaurant'
     },
     {
         name: 'MEDICAL CARE CENTER',
@@ -89,7 +89,7 @@ const ProjectDetails = () => {
     return (
         <section className="detail-body">
             <div className="container ">
-                <h1 className="fw-bold text-primary">PROJECT DETAILS</h1>
+                <h1 className="fw-bold text-light">PROJECT DETAILS</h1>
                 <Card className="h-100 border-0 shadow p-3 mx-auto detail-card">
                     <Carousel fade style={{ borderRadius: '20px' }}>
                         <Carousel.Item>

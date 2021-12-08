@@ -1,6 +1,6 @@
 .detail-body{
     min-height: 1000px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 .detail-body h1 {
     padding:  100px 0;
@@ -17,7 +17,7 @@
 
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 600px) {
     .detail-body{
         height: 100%;
     }

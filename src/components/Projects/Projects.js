@@ -85,10 +85,10 @@ const projectsData = [
 const Projects = () => {
     return (
         <>
-            <section id="projects" style={{ backgroundColor: '#192a56' }}>
+            <section id="projects" style={{ backgroundColor: '' }}>
                 <div>
                     <Fade bottom duration={3000} distance="250px">
-                        <h1 className="text-primary fw-bold pt-5">MY PROJECTS</h1>
+                        <h1 className="text-light fw-bold pt-5">MY PROJECTS</h1>
                     </Fade>
                     <div className="container">
                         <div className="row d-md-flex align-items-center justify-content-center">

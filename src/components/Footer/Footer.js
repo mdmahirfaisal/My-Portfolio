@@ -12,8 +12,8 @@ const Footer = () => {
             <div className="container">
                 <div className="row pb-5">
                     <div className="col-md-4">
-                        <Card style={{ backgroundColor: '#2C3A47', marginTop: '-60px' }} className="shadow">
-                            <Card.Img variant="top" src={myImage} style={{ marginTop: '-70px' }} />
+                        <Card style={{ backgroundColor: '#1e272e', marginTop: '-60px', borderRadius: '20px' }} className="shadow">
+                            <Card.Img variant="top" src={myImage} style={{ marginTop: '-50px' }} />
                             <Card.Title className="text-light" >Mahir Faisal</Card.Title>
                             <Card.Body>
                                 <Card.Text className="text-light w-75 mx-auto
