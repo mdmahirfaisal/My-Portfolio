@@ -5,6 +5,8 @@ import { Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+import Flash from 'react-reveal/Flash';
+
 
 
 
@@ -34,46 +36,48 @@ const Contact = () => {
         <>
             <section id="contact" className="contact-section">
                 <Fade bottom duration={3000} distance="250px">
-                    <h1 className="fw-bold text-light pt-5">CONTACT ME</h1>
+                    <h1 className="fw-bold text-light" style={{ paddingTop: '70px' }}>CONTACT ME</h1>
                 </Fade>
-                <div className="container">
-                    <div className="mx-auto p-5" style={{ maxWidth: '800px' }}>
-                        <Fade bottom duration={3000} distance="250px">
-                            <Bounce duration={1500}>
-                                <form onSubmit={handleSubmit} className=" row form-control py-3 px-4 border-0 shadow" style={{ borderRadius: '20px' }}>
-                                    <TextField className="col-12 col-md-5 me-md-2"
-                                        label="Your Name"
-                                        type="text"
-                                        required
-                                        name="name"
-                                        variant="standard" />
+                <Fade bottom duration={3000} distance="250px">
+                    <Bounce duration={1500}>
+                        <Flash duration={3000}>
+                            <div className="container d-flex align-items-center ">
+                                <div className="mx-auto p-5" style={{ maxWidth: '800px' }}>
+                                    <form onSubmit={handleSubmit} className=" row form-control py-3 px-4 border-0 shadow" style={{ borderRadius: '20px' }}>
+                                        <TextField className="col-12 col-md-5 me-md-2"
+                                            label="Your Name"
+                                            type="text"
+                                            required
+                                            name="name"
+                                            variant="standard" />
 
 
-                                    <TextField className="col-12 col-md-5 ms-md-2"
-                                        label="Your Email"
-                                        required
-                                        type="email"
-                                        name="email"
-                                        variant="standard" />
+                                        <TextField className="col-12 col-md-5 ms-md-2"
+                                            label="Your Email"
+                                            required
+                                            type="email"
+                                            name="email"
+                                            variant="standard" />
 
 
-                                    <TextField className="col-12 col-md-12 ms-md-2 mt-4"
-                                        label="Your Subject"
-                                        required
-                                        type="text"
-                                        name="subject"
-                                        variant="standard" />
+                                        <TextField className="col-12 col-md-12 ms-md-2 mt-4"
+                                            label="Your Subject"
+                                            required
+                                            type="text"
+                                            name="subject"
+                                            variant="standard" />
 
 
-                                    <Form.Label className="text-start  mt-5">Send message</Form.Label>
-                                    <textarea className="col-12 form-control mb-2" style={{ borderRadius: '10px' }} name="message" placeholder="Description" variant="standard" />
-                                    <input className=" mx-auto rounded-pill btn btn-outline-danger mt-2" type="submit" />
+                                        <Form.Label className="text-start  mt-5">Send message</Form.Label>
+                                        <textarea className="col-12 form-control mb-2" style={{ borderRadius: '10px' }} name="message" placeholder="Description" variant="standard" />
+                                        <input className=" mx-auto rounded-pill btn btn-outline-danger mt-2" type="submit" />
 
-                                </form>
-                            </Bounce>
-                        </Fade>
-                    </div>
-                </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </Flash>
+                    </Bounce>
+                </Fade>
             </section>
         </>
     );

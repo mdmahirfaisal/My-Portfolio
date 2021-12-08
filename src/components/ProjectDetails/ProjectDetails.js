@@ -14,6 +14,8 @@ import medical1 from './project-image/medical-care-2.PNG';
 import medical2 from './project-image/medical-care.PNG';
 import medical3 from './project-image/medical-care-3.PNG';
 import { Card, Carousel, Nav } from 'react-bootstrap';
+import Zoom from 'react-reveal/Zoom';
+
 
 
 
@@ -90,42 +92,43 @@ const ProjectDetails = () => {
         <section className="detail-body">
             <div className="container ">
                 <h1 className="fw-bold text-light">PROJECT DETAILS</h1>
-                <Card className="h-100 border-0 shadow p-3 mx-auto detail-card">
-                    <Carousel fade style={{ borderRadius: '20px' }}>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={img1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={img2}
-                                alt="Second slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={img3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                    </Carousel>
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>
-                            {details}
-                        </Card.Text>
+                <Zoom bottom duration={3000}>
+                    <Card className="h-100 border-0 shadow p-3 mx-auto detail-card">
+                        <Carousel fade style={{ borderRadius: '20px' }}>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={img1}
+                                    alt="First slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={img2}
+                                    alt="Second slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={img3}
+                                    alt="Third slide"
+                                />
+                            </Carousel.Item>
+                        </Carousel>
+                        <Card.Body>
+                            <Card.Title>{name}</Card.Title>
+                            <Card.Text>
+                                {details}
+                            </Card.Text>
 
-                        <Nav.Link as="a" href={`${live}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-danger rounded-pill py-1 w-100 ">Live Site</button></Nav.Link>
-                        <Nav.Link as="a" href={`${code}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-info rounded-pill py-1 w-100 ">Github Code</button></Nav.Link>
+                            <Nav.Link as="a" href={`${live}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-danger rounded-pill py-1 w-100 ">Live Site</button></Nav.Link>
+                            <Nav.Link as="a" href={`${code}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-info rounded-pill py-1 w-100 ">Github Code</button></Nav.Link>
 
-                    </Card.Body>
-                </Card>
-
+                        </Card.Body>
+                    </Card>
+                </Zoom>
 
 
             </div>
