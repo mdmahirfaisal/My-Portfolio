@@ -1,6 +1,9 @@
 import React from 'react';
 import './ProjectDetails.css';
 import { useParams } from 'react-router';
+import mobile1 from './project-image/mobile-1.PNG';
+import mobile2 from './project-image/mobile-3.PNG';
+import mobile3 from './project-image/mobile-6.PNG';
 import car1 from './project-image/car-shop.PNG';
 import car2 from './project-image/car-shop-2.PNG';
 import car3 from './project-image/car-shop-3.PNG';
@@ -20,6 +23,28 @@ import Zoom from 'react-reveal/Zoom';
 
 
 const projectsData = [
+    {
+        name: 'MOBILE BAZAR',
+        id: 1,
+        img1: mobile1,
+        img2: mobile2,
+        img3: mobile3,
+        details: ` My website was created following a simple mobile shop. After registering, users will be able
+        to order mobile phones, cancel the order and see the status of the order. And the admin will
+        be able to manage orders and products.
+        Users will see the homepage first when they enter my website. Navigation links, banners,
+        mobile phone parts, raise, products, information, reviews, contact, and footer sections can be
+        found on this page.
+        There is a button below the products on the home page. Clicking on it, the user will see all the
+        products on the products page, and if he wants to order a product, he has to register. After
+        registration or login, you will see a dashboard that is different for users and admin.
+        Users will actually see the PROFILE, PRODUCTS, MY ORDERS, PAY NOW, and ADD REVIEW
+        options on the Dashboard page, and the Admin Dashboard page will actually see the PROFILE,
+        MANAGE ORDERS, Ad PRODUCT, MANAGE PRODUCTS Sections. Admin can change the
+        status of an order that users can see on their order list page.`,
+        live: 'https://smart-mobile-bazar.web.app/',
+        code: 'https://github.com/mdmahirfaisal/Mobile-bazar'
+    },
     {
         name: 'SUPER CAR SHOP',
         id: 1,

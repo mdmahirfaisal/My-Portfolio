@@ -13,7 +13,9 @@ import medical1 from './project-image/medical-care-2.PNG';
 import medical2 from './project-image/medical-care.PNG';
 import medical3 from './project-image/medical-care-3.PNG';
 import Fade from 'react-reveal/Fade';
-
+import mobile1 from './project-image/mobile-1.PNG';
+import mobile2 from './project-image/mobile-3.PNG';
+import mobile3 from './project-image/mobile-6.PNG';
 
 
 
@@ -23,8 +25,30 @@ import Fade from 'react-reveal/Fade';
 
 const projectsData = [
     {
-        name: 'SUPER CAR SHOP',
+        name: 'MOBILE BAZAR',
         id: 1,
+        img1: mobile1,
+        img2: mobile2,
+        img3: mobile3,
+        details: ` My website was created following a simple mobile shop. After registering, users will be able
+        to order mobile phones, cancel the order and see the status of the order. And the admin will
+        be able to manage orders and products.
+        Users will see the homepage first when they enter my website. Navigation links, banners,
+        mobile phone parts, raise, products, information, reviews, contact, and footer sections can be
+        found on this page.
+        There is a button below the products on the home page. Clicking on it, the user will see all the
+        products on the products page, and if he wants to order a product, he has to register. After
+        registration or login, you will see a dashboard that is different for users and admin.
+        Users will actually see the PROFILE, PRODUCTS, MY ORDERS, PAY NOW, and ADD REVIEW
+        options on the Dashboard page, and the Admin Dashboard page will actually see the PROFILE,
+        MANAGE ORDERS, Ad PRODUCT, MANAGE PRODUCTS Sections. Admin can change the
+        status of an order that users can see on their order list page.`,
+        live: 'https://smart-mobile-bazar.web.app/',
+        code: 'https://github.com/mdmahirfaisal/Mobile-bazar'
+    },
+    {
+        name: 'SUPER CAR SHOP',
+        id: 2,
         img1: car1,
         img2: car2,
         img3: car3,
@@ -41,7 +65,7 @@ const projectsData = [
     },
     {
         name: 'WATER DELIVERY',
-        id: 2,
+        id: 3,
         img1: water1,
         img2: water2,
         img3: water3,
@@ -55,7 +79,7 @@ const projectsData = [
     },
     {
         name: 'NEW STAR RESTAURANT',
-        id: 3,
+        id: 4,
         img1: food1,
         img2: food2,
         img3: food3,
@@ -68,7 +92,7 @@ const projectsData = [
     },
     {
         name: 'MEDICAL CARE CENTER',
-        id: 4,
+        id: 5,
         img1: medical1,
         img2: medical2,
         img3: medical3,
