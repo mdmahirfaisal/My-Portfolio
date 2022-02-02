@@ -15,7 +15,7 @@ const ProjectInfo = ({ project }) => {
     }
 
     return (
-        <Fade bottom duration={3000} distance="150px">
+        <Fade bottom duration={2500} distance="100px">
             <div className=" col-sm-12 col-md-6">
                 <div className="home-card" style={{ cursor: 'pointer', borderRadius: '10px' }}>
                     <div className="slide slide1" style={{ borderRadius: '10px' }}>

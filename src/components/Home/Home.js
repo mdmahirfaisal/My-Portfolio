@@ -12,6 +12,7 @@ const Home = () => {
 
     return (
         <div id="home" className="home-background">
+
             <Banner></Banner>
             <About></About>
             <Projects></Projects>

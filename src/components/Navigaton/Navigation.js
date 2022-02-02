@@ -53,6 +53,10 @@ const Navigation = () => {
         setShow(!show);
         setTarget(event.target);
     };
+    // const mainC = {
+    //     green: "#067a75",
+    //     navPY: " padding:'15px'"
+    // };
 
     return (
         <>
@@ -62,21 +66,21 @@ const Navigation = () => {
                     expand="lg"
                     variant="light"
                     fixed="top"
-                    className={(isSticky) ? "shadow-sm bg-white py-2" : "py-4 bg-white"}>
+                    className={(isSticky) ? "shadow-sm bg-success py-2" : "py-4 bg-success  text-light"}>
                     <Container>
 
                         <Navbar.Brand
                             as={HashLink} to="/"
                             className="ml-md-5"
                             style={{ color: "#3a4256", fontSize: "1.55rem" }}>
-                            {/* <img
+                            <img
                                 alt="Logo"
-                                src=""
+                                src="https://i.ibb.co/rQRZkbz/faisal-1.png"
                                 width="40"
                                 height="40"
                                 className="d-inline-block align-top"
-                            />{'   '} */}
-                            <strong>Mahir Faisal</strong>
+                            />{'   '}
+                            <strong className='text-light'>Mahir Faisal</strong>
                         </Navbar.Brand>
                         <Nav>
                             <a href="#;" className="ic menu" tabIndex="1">
@@ -92,13 +96,13 @@ const Navigation = () => {
                                     <div className="sub-menu-block">
                                         <div className="row">
                                             <div className="col">
-                                                <h2 className="sub-menu-head">Home</h2>
+                                                <h2 className="sub-menu-head text-light">Home</h2>
                                                 <ul className="sub-menu-lists">
-                                                    <li><Nav.Link as={HashLink} to="/home#home">Home</Nav.Link></li>
-                                                    <li><Nav.Link as={HashLink} to="/home#about">About</Nav.Link></li>
-                                                    <li><Nav.Link as={HashLink} to="/home#projects">Projects</Nav.Link></li>
-                                                    <li><Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link></li>
-                                                    <li><Nav.Link as={HashLink} to="/blogs">Blogs</Nav.Link></li>
+                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#home">Home</Nav.Link></li>
+                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#about">About</Nav.Link></li>
+                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#projects">Projects</Nav.Link></li>
+                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link></li>
+                                                    <li className='text-light'><Nav.Link as={HashLink} to="/blogs">Blogs</Nav.Link></li>
                                                 </ul>
                                             </div>
 
@@ -113,7 +117,7 @@ const Navigation = () => {
                                         <div className="row">
                                             <div className="col-md-4 col-lg-4 col-sm-4">
                                                 <h2 className="sub-menu-head">Projects</h2>
-                                                <ul className="sub-menu-lists">
+                                                <ul className="sub-menu-lists ">
                                                     <li><Nav.Link href='https://smart-mobile-bazar.web.app/'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://super-car-shop.web.app/'>Car Shop</Nav.Link></li>
                                                     <li><Nav.Link href='https://water-delivery-b84a1.web.app/'>Water Delivery</Nav.Link></li>

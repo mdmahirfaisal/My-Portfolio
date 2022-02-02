@@ -10,19 +10,19 @@ const About = () => {
     return (
         <>
             <section id="about" className="about-section" style={{}}>
-                <Fade bottom duration={2000} distance="100px">
-                    <h1 className="fw-bold text-light pt-5">ABOUT ME</h1>
+                <Fade bottom duration={2500} distance="100px">
+                    <h1 className="fw-bold text-light  text-center">ABOUT ME</h1>
                 </Fade>
                 <div className="container">
                     <div className="row d-md-flex align-items-center">
-                        <Fade left duration={2000} distance="150px">
+                        <Fade left duration={2500} distance="100px">
                             <div className="col-12 col-md-5">
                                 <div>
                                     <img className="img-fluid" src={myImg} alt="Faisal" />
                                 </div>
                             </div>
                         </Fade>
-                        <Fade right duration={2000} distance="150px">
+                        <Fade right duration={2500} distance="100px">
                             <div className="col-12 col-md-7">
                                 <div className="mt-3 about-text">
                                     <h5 className="text-secondary text-start"><Flip cascade duration={2000}> Hi there, I' am</Flip></h5>

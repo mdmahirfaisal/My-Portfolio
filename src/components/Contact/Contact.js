@@ -3,9 +3,7 @@ import './Contact.css';
 import TextField from '@mui/material/TextField';
 import { Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
-import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
-import Flash from 'react-reveal/Flash';
 
 
 
@@ -34,51 +32,50 @@ const Contact = () => {
 
     return (
         <>
-            <section id="contact" className="contact-section">
-                <Fade bottom duration={3000} distance="250px">
-                    <h1 className="fw-bold text-light" style={{ paddingTop: '70px' }}>CONTACT ME</h1>
-                </Fade>
-                <Fade bottom duration={3000} distance="250px">
-                    <Bounce duration={1500}>
-                        <Flash duration={3000}>
-                            <div className="container d-flex align-items-center ">
-                                <div className="mx-auto p-5" style={{ maxWidth: '800px' }}>
-                                    <form onSubmit={handleSubmit} className=" row form-control py-3 px-4 border-0 shadow" style={{ borderRadius: '20px' }}>
-                                        <TextField className="col-12 col-md-5 me-md-2"
-                                            label="Your Name"
-                                            type="text"
-                                            required
-                                            name="name"
-                                            variant="standard" />
 
-
-                                        <TextField className="col-12 col-md-5 ms-md-2"
-                                            label="Your Email"
-                                            required
-                                            type="email"
-                                            name="email"
-                                            variant="standard" />
-
-
-                                        <TextField className="col-12 col-md-12 ms-md-2 mt-4"
-                                            label="Your Subject"
-                                            required
-                                            type="text"
-                                            name="subject"
-                                            variant="standard" />
-
-
-                                        <Form.Label className="text-start  mt-5">Send message</Form.Label>
-                                        <textarea className="col-12 form-control mb-2" style={{ borderRadius: '10px' }} name="message" placeholder="Description" variant="standard" />
-                                        <input className=" mx-auto rounded-pill btn btn-outline-danger mt-2" type="submit" />
-
-                                    </form>
+            <div className="contact-body">
+                <Fade bottom duration={2500} distance="100px"><h1 className="fw-bold text-light text-center">CONTACT ME</h1></Fade>
+                <Fade bottom duration={2500} distance="100px">
+                    <section id="contact">
+                        <div className="contact-box">
+                            <div className="contact-links" style={{ backgroundColor: '#6a9ac4' }}>
+                                <h2>CONTACT ME</h2>
+                                <div className="links">
+                                    <div className="link">
+                                        <a href='/home#home'><img className='contact-img' src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
+                                    </div>
+                                    <div className="link">
+                                        <a href='/home#home'><img className='contact-img' src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
+                                    </div>
+                                    <div className="link">
+                                        <a href='/home#home'><img className='contact-img' src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" /></a>
+                                    </div>
+                                    <div className="link">
+                                        <a href='/home#home'><img className='contact-img' src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
+                                    </div>
                                 </div>
                             </div>
-                        </Flash>
-                    </Bounce>
+                            <div className="contact-form-wrapper bg-light">
+                                <form>
+                                    <div className="form-item">
+                                        <input type="text" name="sender" required />
+                                        <label>Name:</label>
+                                    </div>
+                                    <div className="form-item">
+                                        <input type="text" name="email" required />
+                                        <label>Email:</label>
+                                    </div>
+                                    <div className="form-item">
+                                        <textarea className="" name="message" required></textarea>
+                                        <label>Message:</label>
+                                    </div>
+                                    <button className="submit-btn">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
                 </Fade>
-            </section>
+            </div>
         </>
     );
 };

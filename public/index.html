@@ -30,6 +30,11 @@
   <script src="https://kit.fontawesome.com/38537920f6.js" crossorigin="anonymous"></script>
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+
   <title>Mahir Faisal</title>
 </head>
 
@@ -45,7 +50,38 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
+    
     -->
+
+  <script>
+
+
+    let val;
+    window.onload = function () {
+      Particles.init({
+        selector: ".background"
+      });
+    };
+    var particles = Particles.init({
+      selector: ".background",
+      color: ["#03dac6", "#ff0266", "#000000"],
+      connectParticles: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          options: {
+            color: ["#faebd7", "#03dac6", "#ff0266"],
+            maxParticles: 43,
+            connectParticles: false
+          }
+        }
+      ]
+    });
+
+  </script>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </body>
 
 </html>

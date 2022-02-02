@@ -111,8 +111,8 @@ const Projects = () => {
         <>
             <section id="projects" style={{ backgroundColor: '' }}>
                 <div>
-                    <Fade bottom duration={3000} distance="250px">
-                        <h1 className="text-light fw-bold pt-5">MY PROJECTS</h1>
+                    <Fade bottom duration={2500} distance="100px">
+                        <h1 className="text-light fw-bold pt-5 text-center">MY PROJECTS</h1>
                     </Fade>
                     <div className="container">
                         <div className="row d-md-flex align-items-center justify-content-center">
