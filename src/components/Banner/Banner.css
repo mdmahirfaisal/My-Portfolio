@@ -68,9 +68,7 @@ body{
 .home .button{
   margin:14px 0;
 }
-p {
-  color:var(--primary-color);
-}
+
 .home .button button{
   outline:none;
   padding:8px 16px;
@@ -98,31 +96,20 @@ p {
   }
 }
 
-/* a {
-    line-height:3em;
-    display: inline-block;
-    text-decoration: none;
-    padding:120;
-    margin: 42;
-} */
 .media-icons a{
   color:var(--primary-color);
   font-size: 18px;
   margin:0 6px;
 }  
-/* .span {
-  font-size: 55px;
+ .span {
+  font-size: 65px;
   letter-spacing: 0.15rem;
   font-family: 'Ubuntu', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   color: #faebd7;
   z-index: 4;
 }
-span:hover {
-  color: #ff0266;
-  font-weight: 300;
-  font-size: 65px;
-}    */
+
 .loader span {
   color: #faebd7;
   text-shadow: 0 0 0 #faebd7;
@@ -252,11 +239,11 @@ span:hover {
   width: 120px;
   height: 120px;
 }
-/* .green .progress .inner,
+.green .progress .inner,
 .red .progress .inner,
 .orange .progress .inner {
   border: .3px solid #1a1a1a;
-} */
+}
 .green .progress .inner,
 .red .progress .inner,
 .orange .progress .inner {

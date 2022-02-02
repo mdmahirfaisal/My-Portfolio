@@ -1,14 +1,5 @@
 import React from 'react';
 import './Banner.css';
-// import Fade from 'react-reveal/Fade';
-// import Bounce from 'react-reveal/Bounce';
-// import Flip from 'react-reveal/Flip';
-// import RubberBand from 'react-reveal/RubberBand';
-
-
-
-// import { Nav } from 'react-bootstrap';
-// import bannerImg from './image/coder-removebg-preview.png'
 
 
 const Banner = () => {
@@ -24,8 +15,10 @@ const Banner = () => {
                         <div className="text-one">Hello,</div>
                         <div className="text-two">
                             <h3 className="span loader">
-                                <span className='m'>I'm</span>&nbsp;<br />
+                                <span className='m'><i>I'm</i></span>&nbsp;<br />
                                 <span className='m'>M</span>
+                                <span className='m'>D.</span>
+                                <span className='m'> M</span>
                                 <span className='m'>a</span>
                                 <span className='m'>h</span>
                                 <span className='m'>i</span>
@@ -35,7 +28,6 @@ const Banner = () => {
                                 <span className='m'>i</span>&nbsp;
                                 <span className='m'>s</span>
                                 <span className='m'>a</span>
-                                <span className='m'>i</span>
                                 <span className='m'>L</span>
                             </h3>
                         </div>

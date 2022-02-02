@@ -2,7 +2,6 @@ import * as React from 'react';
 import './Navigation.css';
 import { Container, Nav, Navbar, Overlay, Popover } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
-// import Swal from 'sweetalert2';
 import useMediaQuery from '../useMediaQuery/useMediaQuery';
 
 
@@ -21,29 +20,6 @@ const Navigation = () => {
             }
         })
     }, []);
-
-    // Resume 
-    // const handleResumeOpen = () => {
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't to See My Resume",
-    //         icon: 'question',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Logout'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             Swal.fire(
-    //                 'Resume open',
-    //                 'Resume open successfully.',
-    //                 'success'
-    //             )
-    //         }
-    //     })
-    // }
-
-
     // pop over 
     const [show, setShow] = React.useState(false);
     const [target, setTarget] = React.useState(null);
@@ -53,11 +29,6 @@ const Navigation = () => {
         setShow(!show);
         setTarget(event.target);
     };
-    // const mainC = {
-    //     green: "#067a75",
-    //     navPY: " padding:'15px'"
-    // };
-
     return (
         <>
             <header className="dark">
@@ -66,20 +37,14 @@ const Navigation = () => {
                     expand="lg"
                     variant="light"
                     fixed="top"
-                    className={(isSticky) ? "shadow-sm bg-success py-2" : "py-4 bg-success  text-light"}>
+                    className={(isSticky) ? "shadow-sm text-light bg-success py-2" : "py-4 text-light"}>
                     <Container>
 
                         <Navbar.Brand
                             as={HashLink} to="/"
                             className="ml-md-5"
                             style={{ color: "#3a4256", fontSize: "1.55rem" }}>
-                            <img
-                                alt="Logo"
-                                src="https://i.ibb.co/rQRZkbz/faisal-1.png"
-                                width="40"
-                                height="40"
-                                className="d-inline-block align-top"
-                            />{'   '}
+
                             <strong className='text-light'>Mahir Faisal</strong>
                         </Navbar.Brand>
                         <Nav>
@@ -92,7 +57,7 @@ const Navigation = () => {
                             <ul className="main-nav">
                                 <li className="top-level-link">
 
-                                    <HashLink to="/home#home" className=' text-decoration-none text-dark'><span>Home</span></HashLink>
+                                    <HashLink to="/home#home" className='mega-menu text-decoration-none text-light'><span>Home</span></HashLink>
                                     <div className="sub-menu-block">
                                         <div className="row">
                                             <div className="col">
@@ -112,11 +77,11 @@ const Navigation = () => {
                                 </li>
 
                                 <li className="top-level-link">
-                                    <Nav.Link as={HashLink} to="/home#projects" className="mega-menu  text-decoration-none text-dark" ><span>Projects</span></Nav.Link>
+                                    <HashLink to="/home#projects" className='mega-menu text-decoration-none text-light'><span>Projects</span></HashLink>
                                     <div className="sub-menu-block">
                                         <div className="row">
                                             <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head">Projects</h2>
+                                                <h2 className="sub-menu-head text-light ">Projects</h2>
                                                 <ul className="sub-menu-lists ">
                                                     <li><Nav.Link href='https://smart-mobile-bazar.web.app/'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://super-car-shop.web.app/'>Car Shop</Nav.Link></li>
@@ -126,7 +91,7 @@ const Navigation = () => {
                                                 </ul>
                                             </div>
                                             <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head">Client Code</h2>
+                                                <h2 className="sub-menu-head text-light">Client Code</h2>
                                                 <ul className="sub-menu-lists">
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Mobile-bazar'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Car-shop'>Car Shop</Nav.Link></li>
@@ -136,7 +101,7 @@ const Navigation = () => {
                                                 </ul>
                                             </div>
                                             <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head">Backend Code</h2>
+                                                <h2 className="sub-menu-head text-light">Backend Code</h2>
                                                 <ul className="sub-menu-lists">
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Mobile-bazar-server'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Car-shop-server'>Car Shop</Nav.Link></li>
@@ -151,14 +116,13 @@ const Navigation = () => {
                                 </li>
 
                                 <li className="top-level-link">
-                                    <Nav.Link as={HashLink} to="/home#about" className="mega-menu text-dark text-decoration-none"><span>About</span></Nav.Link>
-
+                                    <HashLink to="/home#about" className='sub-menu text-decoration-none text-light'><span>About</span></HashLink>
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/home#contact" className='text-dark text-decoration-none'><span>Contact</span></HashLink>
+                                    <HashLink to="/home#contact" className='sub-menu text-decoration-none text-light'><span>Contact</span></HashLink>
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/blogs" className='text-dark text-decoration-none'><span>Blogs</span></HashLink>
+                                    <HashLink to="/blogs" className='sub-menu text-decoration-none text-light'><span>Blogs</span></HashLink>
                                 </li>
                             </ul>
                         </Nav>

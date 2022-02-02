@@ -1,9 +1,9 @@
 import React from 'react';
 import './Contact.css';
 import TextField from '@mui/material/TextField';
-import { Form } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';
+import { TextareaAutosize } from '@mui/material';
 
 
 
@@ -56,20 +56,20 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="contact-form-wrapper bg-light">
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     <div className="form-item">
-                                        <input type="text" name="sender" required />
-                                        <label>Name:</label>
+                                        <TextField className="w-100 mb-2" variant="standard" label='Enter Your Name' type="text" name="sender" required />
+                                        {/* <label>Name:</label> */}
                                     </div>
                                     <div className="form-item">
-                                        <input type="text" name="email" required />
-                                        <label>Email:</label>
+                                        <TextField className="w-100 mb-2" variant="standard" label='Enter Your Email' type="email" name="email" required />
+                                        {/* <label>Email:</label> */}
                                     </div>
+                                    <p className=''>Enter Your Message:</p>
                                     <div className="form-item">
-                                        <textarea className="" name="message" required></textarea>
-                                        <label>Message:</label>
+                                        <TextareaAutosize label='Enter Your Message' placeholder='Enter Your Message' minRows={5} className="" name="message" required></TextareaAutosize>
                                     </div>
-                                    <button className="submit-btn">Send</button>
+                                    <button type='submit' className="submit-btn">Send</button>
                                 </form>
                             </div>
                         </div>
