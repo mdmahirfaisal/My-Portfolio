@@ -47,7 +47,7 @@ const projectsData = [
     },
     {
         name: 'SUPER CAR SHOP',
-        id: 1,
+        id: 2,
         img1: car1,
         img2: car2,
         img3: car3,
@@ -64,7 +64,7 @@ const projectsData = [
     },
     {
         name: 'WATER DELIVERY',
-        id: 2,
+        id: 3,
         img1: water1,
         img2: water2,
         img3: water3,
@@ -78,7 +78,7 @@ const projectsData = [
     },
     {
         name: 'NEW STAR RESTAURANT',
-        id: 3,
+        id: 4,
         img1: food1,
         img2: food2,
         img3: food3,
@@ -91,7 +91,7 @@ const projectsData = [
     },
     {
         name: 'MEDICAL CARE CENTER',
-        id: 4,
+        id: 5,
         img1: medical1,
         img2: medical2,
         img3: medical3,

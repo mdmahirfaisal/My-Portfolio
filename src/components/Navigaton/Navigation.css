@@ -10,7 +10,7 @@
    margin: 0px;
    padding: 0px;
    font-family: "Open Sans", sans-serif;
-   background-color: #fff;
+   scroll-behavior: smooth;
  }
  
  /* Navigation Styles */
@@ -138,7 +138,7 @@
      transform-origin: center center;
    }
    .ic.menu:focus .line {
-     background-color: rgb(255, 255, 255) !important;
+     background-color: rgb(0, 0, 0) !important;
    }
  
    .ic.menu:focus .line:nth-child(1) {

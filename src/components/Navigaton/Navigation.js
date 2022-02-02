@@ -147,14 +147,14 @@ const Navigation = () => {
                                 </li>
 
                                 <li className="top-level-link">
-                                    <Nav.Link as={HashLink} to="/home#about" className={isMobile ? "mega-menu text-light text-decoration-none" : "mega-menu text-dark text-decoration-none"}><span>About</span></Nav.Link>
+                                    <Nav.Link as={HashLink} to="/home#about" className="mega-menu text-dark text-decoration-none"><span>About</span></Nav.Link>
 
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/home#contact" className={isMobile ? 'text-light text-decoration-none' : 'text-dark text-decoration-none'}><span>Contact</span></HashLink>
+                                    <HashLink to="/home#contact" className='text-dark text-decoration-none'><span>Contact</span></HashLink>
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/blogs" className={isMobile ? 'text-light text-decoration-none' : 'text-dark text-decoration-none'}><span>Blogs</span></HashLink>
+                                    <HashLink to="/blogs" className='text-dark text-decoration-none'><span>Blogs</span></HashLink>
                                 </li>
                             </ul>
                         </Nav>
