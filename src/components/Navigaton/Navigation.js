@@ -20,15 +20,7 @@ const Navigation = () => {
             }
         })
     }, []);
-    // pop over 
-    const [show, setShow] = React.useState(false);
-    const [target, setTarget] = React.useState(null);
-    const ref = React.useRef(null)
 
-    const handleClick = (event) => {
-        setShow(!show);
-        setTarget(event.target);
-    };
     return (
         <>
             <header className="dark">
@@ -42,8 +34,8 @@ const Navigation = () => {
 
                         <Navbar.Brand
                             as={HashLink} to="/"
-                            className="ml-md-5"
-                            style={{ color: "#3a4256", fontSize: "1.55rem" }}>
+                            className=""
+                            style={{ color: "#3a4256", fontSize: "1.1rem" }}>
 
                             <strong className='text-light'>Mahir Faisal</strong>
                         </Navbar.Brand>
@@ -128,25 +120,7 @@ const Navigation = () => {
                         </Nav>
 
                         <Nav className='ms-auto'>
-                            <div ref={ref}>
-                                <h1 onClick={handleClick} className={isMobile ? 'me-5 mt-2' : ' ms-auto'} style={{ cursor: 'pointer' }}><i className="fas fa-user-circle"></i></h1>
-                                <Overlay
-                                    show={show}
-                                    target={target}
-                                    placement="bottom"
-                                    container={ref}
-                                    containerPadding={20}
-                                >
-                                    <Popover id="popover-contained" className='border-0 bg-light shadow'>
-                                        <Popover.Header className='border-0' > <h5 className='text-center text-primary'>MD. Mahir Faisal</h5></Popover.Header>
-                                        <Popover.Body>
-                                            <p>rjmahir.faisal@gmail.com</p>
-
-                                            <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-success py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>
-                                        </Popover.Body>
-                                    </Popover>
-                                </Overlay>
-                            </div>
+                            {!isMobile && <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-success py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>}
                         </Nav>
                     </Container>
                 </Navbar>

@@ -1,12 +1,21 @@
-import React from 'react';
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions, Collapse, } from '@mui/material';
 import './ProjectInfo.css';
-import { Card, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import Fade from 'react-reveal/Fade';
 
 
 const ProjectInfo = ({ project }) => {
     const { name, details, img1, img2, img3, id } = project;
+
+    const [expanded, setExpanded] = React.useState(false);
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
 
     const history = useHistory()
     const handleDetails = (detailId) => {
@@ -15,13 +24,14 @@ const ProjectInfo = ({ project }) => {
     }
 
     return (
-        <Fade bottom duration={2500} distance="100px">
-            <div className=" col-sm-12 col-md-6">
-                <div className="home-card" style={{ cursor: 'pointer', borderRadius: '10px' }}>
-                    <div className="slide slide1" style={{ borderRadius: '10px' }}>
-                        <div className="content" style={{ cursor: 'pointer', borderRadius: '10px' }}>
-                            <div className="icon" >
-                                <Carousel>
+        <>
+            <Fade bottom duration={2500} distance="50px">
+                <div className="col-md-6">
+                    <Card className="shadow mb-4" sx={{ borderRadius: '20px' }}>
+                        <CardActionArea>
+                            <CardContent
+                            >
+                                <Carousel fade>
                                     <Carousel.Item interval={2800}>
                                         <img style={{ maxHeight: '270px' }}
                                             className="d-block w-100"
@@ -47,22 +57,45 @@ const ProjectInfo = ({ project }) => {
 
                                     </Carousel.Item>
                                 </Carousel>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="slide slide2 bg-light" style={{ cursor: 'pointer', borderRadius: '10px', backgroundColor: '' }}>
-                        <div className="content">
-                            <Card.Body className="pt-0">
-                                <Card.Title as="h5" className="fw-bold text-primary">{name}</Card.Title>
-                                <p>{details.slice(0, 100)}</p>
-                                <button onClick={() => handleDetails(id)} className="btn btn-outline-info rounded-pill w-100 py-1 mt-2">Details</button>
-                            </Card.Body>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </Fade>
+
+                            </CardContent>
+                            <CardContent className='p-2 pb-0 text-start'>
+                                <div className="text-center">
+                                    <h5>{name}.</h5>
+                                </div>
+                            </CardContent>
+                            <CardActions disableSpacing>
+
+                                <CardContent className='row w-100 '>
+                                    <div className="col-6">
+                                        <Typography
+                                            expand={expanded}
+                                            onClick={handleExpandClick}
+                                            aria-expanded={expanded}
+                                            aria-label="show more"
+                                            paragraph
+                                            style={{ fontSize: '13px', cursor: 'pointer' }} className='text-dark text-start fs-5 text-end'> Details See... <span className=''>{expanded ? "less" : "more"}</span>
+                                        </Typography>
+                                    </div>
+                                    <div className="col-5">
+                                        <Button onClick={() => handleDetails(id)} variant='contained' className='w-100'>SHOW DETAILS</Button>
+
+                                    </div>
+                                </CardContent>
+
+                            </CardActions>
+                            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                                <CardContent>
+                                    <p>{details}</p>
+
+                                </CardContent>
+                            </Collapse>
+                        </CardActionArea>
+                    </Card>
+                </div>
+            </Fade>
+        </>
     );
 };
 

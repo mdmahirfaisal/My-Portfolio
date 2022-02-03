@@ -16,47 +16,52 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <div className="row">
+        {/* <div className="col-md-2 " style={{}}>
 
-        <Navigation></Navigation>
-        <Switch>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
+        </div> */}
 
-          <Route path="/about">
-            <About></About>
-          </Route>
+        <div className="">
+          <Router>
+            <Navigation></Navigation>
+            <Switch>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
 
-          <Route path="/projects">
-            <Projects></Projects>
-          </Route>
-          <Route path="/details/:projectId">
-            <ProjectDetails></ProjectDetails>
-          </Route>
+              <Route path="/about">
+                <About></About>
+              </Route>
 
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/blogs">
-            <Blogs></Blogs>
-          </Route>
+              <Route path="/projects">
+                <Projects></Projects>
+              </Route>
+              <Route path="/details/:projectId">
+                <ProjectDetails></ProjectDetails>
+              </Route>
 
-          <Route path="/footer">
-            <Footer></Footer>
-          </Route>
+              <Route path="/contact">
+                <Contact></Contact>
+              </Route>
+              <Route path="/blogs">
+                <Blogs></Blogs>
+              </Route>
 
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
+              <Route path="/footer">
+                <Footer></Footer>
+              </Route>
 
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
 
-        </Switch>
-      </Router>
-
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+            </Switch>
+          </Router>
+        </div>
+      </div>
     </div>
   );
 }

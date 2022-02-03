@@ -107,7 +107,6 @@ const ProjectDetails = () => {
     const { projectId } = useParams()
 
     const singleProject = projectsData.filter(proData => proData.id == projectId);
-    console.log(singleProject[0])
     const { name, img1, img2, img3, details, live, code } = singleProject[0];
 
     return (

@@ -1,8 +1,7 @@
- .about-text{
+ .about-text {
    text-align: start;
-  color: green;
-  padding: 20px;
-  margin-bottom: 20px;
+  color: rgb(33, 232, 228);
+ 
 }
 
 @media screen and (max-width: 600px) {

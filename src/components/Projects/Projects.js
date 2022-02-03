@@ -109,13 +109,13 @@ const projectsData = [
 const Projects = () => {
     return (
         <>
-            <section id="projects" style={{ backgroundColor: '' }}>
+            <section id="projects" className='project-body'>
                 <div>
-                    <Fade bottom duration={2500} distance="100px">
+                    <Fade bottom duration={2500} distance="50px">
                         <h1 className="text-light fw-bold pt-5 text-center">MY PROJECTS</h1>
                     </Fade>
                     <div className="container">
-                        <div className="row d-md-flex align-items-center justify-content-center">
+                        <div className="row ">
                             {projectsData.map(project => <ProjectInfo
                                 key={project.name}
                                 project={project}

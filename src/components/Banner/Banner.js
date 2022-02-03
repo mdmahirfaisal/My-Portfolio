@@ -2,12 +2,13 @@ import React from 'react';
 import './Banner.css';
 
 
+
 const Banner = () => {
+
 
     return (
         <div id="banner" className="banner-body" >
             <canvas className="background"></canvas>
-
             <section className="home container" id="home">
                 <div className="home-content">
                     <div className="text">
@@ -31,7 +32,8 @@ const Banner = () => {
                                 <span className='m'>L</span>
                             </h3>
                         </div>
-                        <div className="text-three">Full Stack Developer</div>
+
+                        <div id='typewriter' className="text-three">MERN Stack Developer</div>
                         <div className="text-four">From Rajshahi, Bangladesh.</div>
                     </div>
                     <div className="button">

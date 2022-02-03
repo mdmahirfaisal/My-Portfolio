@@ -25,9 +25,9 @@ const About = () => {
                         <Fade right duration={2500} distance="50px">
                             <div className="col-12 col-md-7">
                                 <div className="mt-3 about-text text-start">
-                                    <h4 className="text-success text-start"><Flip cascade duration={2000}> Hi there, I' am</Flip></h4>
-                                    <h3 className="text-success text-start  ms-0" style={{ fontSize: '50px' }}><Flip cascade duration={2000}>Mahir Faisal</Flip></h3>
-                                    <p className="text-success text-start"><i><Flip cascade duration={2000}>I am a junior front-end web developer I am working with react.js. I have a good grasp of HTML5 CSS3 JAVASCRIPT. And I also did some projects with Node.js Express.js MongoDB in the backend I have 5 Plus project experience. Thank you.</Flip></i></p>
+                                    <h4 className="about-text text-start"><Flip cascade duration={2000}> Hi there, I' am</Flip></h4>
+                                    <h1 className="about-text text-start  ms-0"><Flip cascade duration={2000}>Mahir Faisal</Flip></h1>
+                                    <p className="about-text text-start"><i><Flip cascade duration={2000}>I am a junior front-end web developer I am working with react.js. I have a good grasp of HTML5 CSS3 JAVASCRIPT. And I also did some projects with Node.js Express.js MongoDB in the backend I have 5 Plus project experience. Thank you.</Flip></i></p>
                                     <button className='btn btn-success fs-4'>Resume</button>
                                 </div>
                             </div>
