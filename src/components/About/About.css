@@ -1,8 +1,7 @@
-
-.about-text{
-  background-color: rgba(227, 255, 249, 0.2);
+ .about-text{
+   text-align: start;
+  color: green;
   padding: 20px;
-  border-radius: 20px;
   margin-bottom: 20px;
 }
 
@@ -10,4 +9,4 @@
   .about-section{
       height: 100%;
   }
-}
+} 

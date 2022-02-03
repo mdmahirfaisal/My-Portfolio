@@ -142,7 +142,7 @@ const Navigation = () => {
                                         <Popover.Body>
                                             <p>rjmahir.faisal@gmail.com</p>
 
-                                            <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-danger rounded-pill py-1 w-100">Resume</button></Nav.Link>
+                                            <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-success py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>
                                         </Popover.Body>
                                     </Popover>
                                 </Overlay>
