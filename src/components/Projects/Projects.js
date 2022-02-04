@@ -109,21 +109,23 @@ const projectsData = [
 const Projects = () => {
     return (
         <>
-            <section id="projects" className='project-body'>
-                <div>
-                    <Fade bottom duration={2500} distance="50px">
-                        <h1 className="text-light fw-bold pt-5 text-center">MY PROJECTS</h1>
-                    </Fade>
-                    <div className="container">
-                        <div className="row ">
-                            {projectsData.map(project => <ProjectInfo
-                                key={project.name}
-                                project={project}
-                            ></ProjectInfo>)}
+            <div className="bg-dark">
+                <section id="projects" className='project-body'>
+                    <div>
+                        <Fade bottom duration={2500} distance="50px">
+                            <h2 className="text-light fw-bold py-5 text-center ">MY PROJECTS</h2>
+                        </Fade>
+                        <div className="container">
+                            <div className="row ">
+                                {projectsData.map(project => <ProjectInfo
+                                    key={project.name}
+                                    project={project}
+                                ></ProjectInfo>)}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </>
     );
 };

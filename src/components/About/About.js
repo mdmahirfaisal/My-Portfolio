@@ -10,32 +10,49 @@ import { Nav } from 'react-bootstrap';
 const About = () => {
     return (
         <>
-            <section id="about" className="about-section" style={{}}>
-                <Fade bottom duration={2500} distance="50px">
-                    <h1 className="fw-bold text-light  text-center">ABOUT ME</h1>
-                </Fade>
-                <div className="container">
-                    <div className="row d-md-flex align-items-center">
-                        <Fade left duration={2500} distance="50px">
-                            <div className="col-12 col-md-5">
-                                <div>
-                                    <img className="img-fluid" src={myImg} alt="Faisal" />
+            <div className="bg-dark">
+                <section id="about" className="about-section" style={{}}>
+                    <div className="container">
+                        <div className="row d-md-flex align-items-center">
+                            <Fade left duration={2500} distance="50px">
+                                <div className="col-12 col-md-6">
+                                    <div>
+                                        <img className="img-fluid" src={myImg} alt="Faisal" />
+                                    </div>
                                 </div>
-                            </div>
-                        </Fade>
-                        <Fade right duration={2500} distance="50px">
-                            <div className="col-12 col-md-7">
-                                <div className="mt-3 about-text text-start">
-                                    <h4 className="about-text text-start"><Flip cascade duration={2000}> Hi there, I' am</Flip></h4>
-                                    <h1 className="about-text text-start  ms-0"><Flip cascade duration={2000}>Mahir Faisal</Flip></h1>
-                                    <p className="about-text text-start"><i><Flip cascade duration={2000}>I am a junior front-end web developer I am working with react.js. I have a good grasp of HTML5 CSS3 JAVASCRIPT. And I also did some projects with Node.js Express.js MongoDB in the backend I have 5 Plus project experience. Thank you.</Flip></i></p>
-                                    <Nav.Link className="fs-4" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className="btn btn-success py-1 ">Resume</button></Nav.Link>
+                            </Fade>
+                            <Fade right duration={2500} distance="50px">
+                                <div className="col-12 col-md-6">
+                                    <div className="about-text  text-start">
+                                        <h1 className=" text-start  "><span className='border-bottom border-danger'>About</span> Me</h1>
+                                        <p className="  text-start" style={{ fontSize: '16px' }}><i>
+                                            I am a MERN-Stack WEB Developer. I am working with React, Node.js and MongoDB. I also have experience in developing static websites using HTML5, CSS3 and JavaScript (ES6). I am a quick learner. I believe in hard work and efficiency. That's why I am always ready to accomplish any task by working hard. I always focus on learning new technology. My goal is to become A World-Class Professional Web Developer.
+                                            <br />
+                                            <span className='border-bottom'>Here are a few technologies I've been working with recently :</span>
+                                        </i></p>
+                                        <h5 className='my-0 py-0 text-danger'>Front-end</h5>
+                                        <p>HTML 5, CSS 3,  JavaScript (ES6), React.js, Redux, React Bootstrap, Material UI, </p>
+
+                                        <h5 className='my-0 py-0 text-danger'>Back-end</h5>
+                                        <p>Node.js, Express.js, Mongo DB </p>
+
+                                        <h5 className='my-0 py-0 text-danger'>Tools</h5>
+                                        <p> VS Code, Git, Chrome Dev Tool, Npm & Yarn,  Firebase, Netlify, Heroku </p>
+
+
+
+
+
+
+                                        {/*                                         
+                                        <Nav.Link className="fs-5" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className="btn btn-danger py-1 ">Resume</button></Nav.Link> */}
+                                    </div>
                                 </div>
-                            </div>
-                        </Fade>
+                            </Fade>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </>
     );
 };

@@ -31,9 +31,8 @@ const Contact = () => {
 
     return (
         <>
-            <div className="">
-                <Fade bottom duration={2500} distance="50px"><h1 className="fw-bold text-light text-center">CONTACT ME</h1></Fade>
-
+            <div className="bg-dark">
+                <Fade bottom duration={2500} distance="50px"><h2 className="fw-bold text-light text-center py-5">CONTACT ME</h2></Fade>
                 <section id="contact">
                     <div className="contact-box">
                         <Fade left duration={2500} distance="50px">
@@ -57,6 +56,7 @@ const Contact = () => {
                         </Fade>
                         <Fade right duration={2500} distance="50px">
                             <div className="contact-form-wrapper bg-light">
+                                <h5 className='text-secondary text-center fw-bold'>SEND YOUR MESSAGE</h5>
                                 <form onSubmit={handleSubmit}>
                                     <div className="form-item">
                                         <TextField className="w-100 mb-2" variant="standard" label='Enter Your Name' type="text" name="sender" required />
@@ -65,7 +65,7 @@ const Contact = () => {
                                         <TextField className="w-100 mb-4" variant="standard" label='Enter Your Email' type="email" name="email" required />
                                     </div>
                                     <div className="form-item">
-                                        <TextareaAutosize style={{ width: '100%', padding: '5px 2px' }} className="p-2" label='Enter Your Message' placeholder='Enter Your Message' minRows={5} className="" name="message" required></TextareaAutosize>
+                                        <TextareaAutosize style={{ width: '100%', padding: '5px' }} className="" label='Enter Your Message' placeholder='Enter Your Message' minRows={5} className="" name="message" required></TextareaAutosize>
                                     </div>
                                     <button type='submit' className="submit-btn">Send</button>
                                 </form>

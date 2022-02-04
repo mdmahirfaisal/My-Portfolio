@@ -69,18 +69,17 @@ const ProjectInfo = ({ project }) => {
 
                                 <CardContent className='row w-100 '>
                                     <div className="col-6">
+                                        <Button onClick={() => handleDetails(id)} variant='contained' className='w-100'>SHOW DETAILS</Button>
+                                    </div>
+                                    <div className="col-6">
                                         <Typography
                                             expand={expanded}
                                             onClick={handleExpandClick}
                                             aria-expanded={expanded}
                                             aria-label="show more"
                                             paragraph
-                                            style={{ fontSize: '13px', cursor: 'pointer' }} className='text-dark text-start fs-5 text-end'> Details See... <span className=''>{expanded ? "less" : "more"}</span>
+                                            style={{ fontSize: '13px', cursor: 'pointer' }} className='text-dark text-start fs-5 text-end'>See... <span className=''>{expanded ? "less" : "more"}</span>
                                         </Typography>
-                                    </div>
-                                    <div className="col-5">
-                                        <Button onClick={() => handleDetails(id)} variant='contained' className='w-100'>SHOW DETAILS</Button>
-
                                     </div>
                                 </CardContent>
 

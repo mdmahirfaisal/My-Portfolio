@@ -1,5 +1,7 @@
 import React from 'react';
 import './Banner.css';
+import Typewriter from 'typewriter-effect';
+
 
 
 
@@ -13,10 +15,9 @@ const Banner = () => {
                 <div className="home-content">
                     <div className="text">
 
-                        <div className="text-one">Hello,</div>
                         <div className="text-two">
                             <h3 className="span loader">
-                                <span className='m'><i>I'm</i></span>&nbsp;<br />
+                                <span className='m'><i>Hi, I'm</i></span>&nbsp;<br />
                                 <span className='m'>M</span>
                                 <span className='m'>D.</span>
                                 <span className='m'> M</span>
@@ -33,17 +34,21 @@ const Banner = () => {
                             </h3>
                         </div>
 
-                        <div id='typewriter' className="text-three">MERN Stack Developer</div>
-                        <div className="text-four">From Rajshahi, Bangladesh.</div>
-                    </div>
-                    <div className="button">
-                        <button>Hire Me</button>
+                        <div className="text-three">
+                            <Typewriter
+                                options={{
+                                    strings: ['MERN Stack Developer', 'JavaScript Developer', 'React Developer', 'And New Technology Learner.'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </div>
+                        <div className="text-four">
+                            A self-motivated and enthusiastic web developer. To gain confidence and fame using my potential in the field of web development and express my innovative creative skills for self and company growth. I always like to learn new things and have experience with new stuff.
+                        </div>
                     </div>
                 </div>
             </section>
-
-
-
         </div >
     );
 };

@@ -1,18 +1,15 @@
 .detail-body{
-    min-height: 1000px;
-    background-color: black;
+    height: 100%;
 }
-.detail-body h1 {
-    padding:  100px 0;
-}
+
 .detail-card{
-    border-radius: 20px;
-    max-width: 800px;
+    border-radius: 10px;
+    /* max-width: 800px; */
     
     background-color: #fffef0;
 }
 .detail-card img{
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 

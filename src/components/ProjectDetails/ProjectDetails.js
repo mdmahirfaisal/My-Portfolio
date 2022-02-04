@@ -17,6 +17,8 @@ import medical1 from './project-image/medical-care-2.PNG';
 import medical2 from './project-image/medical-care.PNG';
 import medical3 from './project-image/medical-care-3.PNG';
 import { Card, Carousel, Nav } from 'react-bootstrap';
+import { Button } from '@mui/material';
+
 
 
 const projectsData = [
@@ -110,11 +112,10 @@ const ProjectDetails = () => {
     const { name, img1, img2, img3, details, live, code } = singleProject[0];
 
     return (
-        <section className="detail-body">
-            <div className="container ">
-                <h1 className="fw-bold text-light">PROJECT DETAILS</h1>
-                <Card className="h-100 border-0 shadow p-3 mx-auto detail-card">
-                    <Carousel fade style={{ borderRadius: '20px' }}>
+        <section className="detail-body bg-dark">
+            <div className="container " style={{ padding: '100px 0' }}>
+                <Card className=" border-0  shadow  detail-card" >
+                    <Carousel fade>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
@@ -143,8 +144,16 @@ const ProjectDetails = () => {
                             {details}
                         </Card.Text>
 
-                        <Nav.Link as="a" href={`${live}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-danger rounded-pill py-1 w-100 ">Live Site</button></Nav.Link>
-                        <Nav.Link as="a" href={`${code}`} target="_blank" rel="noopener noreferrer"><button className="btn btn-outline-info rounded-pill py-1 w-100 ">Github Code</button></Nav.Link>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <Nav.Link as="a" href={`${live}`} target="_blank" rel="noopener noreferrer"><Button variant='contained' className=" py-1 w-100 ">Live Site</Button></Nav.Link>
+
+
+                            </div>
+                            <div className="col-md-6">
+                                <Nav.Link as="a" href={`${code}`} target="_blank" rel="noopener noreferrer"><Button variant='contained' className=" py-1 w-100 ">Github Code</Button></Nav.Link>
+                            </div>
+                        </div>
 
                     </Card.Body>
                 </Card>

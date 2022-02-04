@@ -29,7 +29,7 @@ const Navigation = () => {
                     expand="lg"
                     variant="light"
                     fixed="top"
-                    className={(isSticky) ? "shadow-sm text-light bg-success py-2" : "py-4 text-light"}>
+                    className={(isSticky) ? "shadow-sm text-light bg-dark py-2" : "py-4 text-light"}>
                     <Container>
 
                         <Navbar.Brand
@@ -120,7 +120,7 @@ const Navigation = () => {
                         </Nav>
 
                         <Nav className='ms-auto'>
-                            {!isMobile && <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-success py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>}
+                            {!isMobile && <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-dark py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>}
                         </Nav>
                     </Container>
                 </Navbar>
