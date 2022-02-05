@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Navigation.css';
-import { Container, Nav, Navbar, Overlay, Popover } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import useMediaQuery from '../useMediaQuery/useMediaQuery';
 
@@ -23,7 +23,7 @@ const Navigation = () => {
 
     return (
         <>
-            <header className="dark">
+            <header className="">
                 <Navbar
                     collapseOnSelect
                     expand="lg"
@@ -31,11 +31,10 @@ const Navigation = () => {
                     fixed="top"
                     className={(isSticky) ? "shadow-sm text-light bg-dark py-2" : "py-4 text-light"}>
                     <Container>
-
                         <Navbar.Brand
                             as={HashLink} to="/"
                             className=""
-                            style={{ color: "#3a4256", fontSize: "1.1rem" }}>
+                            style={{ color: "#3a4256", fontSize: "1rem" }}>
 
                             <strong className='text-light'>Mahir Faisal</strong>
                         </Navbar.Brand>

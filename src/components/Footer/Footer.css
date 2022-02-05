@@ -143,3 +143,12 @@
       display: inline-block;
     }
   }
+
+  .click-footer{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.4s;
+  }
+  .click-footer:hover{
+    color: red;
+  }

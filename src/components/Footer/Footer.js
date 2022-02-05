@@ -1,30 +1,30 @@
 import React from 'react';
 import './Footer.css'
 import { Nav } from 'react-bootstrap';
-import { HashLink } from 'react-router-hash-link';
-
 
 
 const Footer = () => {
     return (
         <div className="footer-section ">
             <footer>
-                <div class="top_header">
+                <div className="top_header">
                     <section>
-                        <span><i class="fa fa-map-marker"></i></span>
-                        <span>Year port road, Baya Bazar, Rajshahi, Bangladesh, 6000</span>
+                        <span><i className="fa fa-map-marker"></i></span>
+
+                        <span> <a className='click-footer' href="https://www.google.com/maps/search/Developers+Area/@24.4282908,88.6065141,21z/data=!4m7!2m6!3m5!1sDevelopers+Area!2s24.428376,+88.606569!4m2!1d88.6065689!2d24.428376" target="_blank" rel='noreferrer'>Baya Bazar Rajshahi, Bangladesh</a></span>
                     </section>
                     <section>
-                        <span><i class="fa fa-phone"></i></span>
-                        <span>+880 01928646555</span>
+                        <span><i className="fa fa-phone"></i></span>
+                        <span><a className='click-footer' href="tel:+8801928646555">01928646555</a></span>
                     </section>
                     <section>
-                        <span><i class="fa fa-envelope"></i></span>
-                        <span>rjmahir.faisal@gmail.com</span>
+                        <span><i className="fa fa-envelope"></i></span>
+                        <span><a className='click-footer' href="https://mail.google.com/mail/?view=cm&fs=1&to=rjmahir.faisal@gmail.com" target="_blank" rel='noreferrer'>rjmahir.faisal@gmail.com</a></span>
+
                     </section>
                 </div>
-                <span class="border-shape"></span>
-                <div class="bottom_content">
+                <span className="border-shape"></span>
+                <div className="bottom_content">
                     <section>
                         <Nav.Link as="a" href={`https://www.facebook.com/profile.php?id=100069936932811`} target="_blank" rel="noopener noreferrer" className="foot-link" ><i className="fab fa-facebook footer-icon"></i></Nav.Link>
 
@@ -44,7 +44,7 @@ const Footer = () => {
                         <a className='foot-link' href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer">Resume</a>
                     </section>
                 </div>
-                <div class="copyright">
+                <div className="copyright">
                     Copyright © 2021  All rights reserved
                 </div>
             </footer>

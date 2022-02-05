@@ -2,10 +2,6 @@ import React from 'react';
 import './About.css';
 import myImg from './img/faisal.png';
 import Fade from 'react-reveal/Fade';
-import Flip from 'react-reveal/Flip';
-import { Nav } from 'react-bootstrap';
-
-
 
 const About = () => {
     return (
