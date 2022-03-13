@@ -1,30 +1,64 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import TextField from '@mui/material/TextField';
-import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';
 import { TextareaAutosize } from '@mui/material';
-
-
-
-
+import Swal from 'sweetalert2';
 
 
 const Contact = () => {
-
+    const form = useRef();
 
     const handleSubmit = e => {
         e.preventDefault();
 
-        emailjs.sendForm('service_ljjmrr6', 'template_40fu3hc', e.target, 'user_olSdnmTSJd55d19AXxoDs')
-            .then((result) => {
-                if (result) {
-                    alert('Your email send successfully')
-                }
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success px-3 rounded-pill ms-3',
+                cancelButton: 'btn btn-danger px-3 rounded-pill'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be send email for Mahir Faisal",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, send it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                emailjs.sendForm('searvice_mahir_faisal', 'template_gt9e74l', form.current, "user_UDxc57tbKbGOn46ILlwCB")
+                    .then((result) => {
+                        console.log(result.text);
+                        swalWithBootstrapButtons.fire(
+                            'Send ',
+                            'Your message has been send',
+                            'success'
+                        )
+                    }, (error) => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: `${error.message}`,
+                            showConfirmButton: false,
+                            timer: 5000
+                        })
+                    });
+
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    'Your message not send',
+                    'error'
+                )
+            }
+        })
         e.target.reset();
     }
 
@@ -40,16 +74,16 @@ const Contact = () => {
                                 <h2 className='contact-h2'>CONTACT ME</h2>
                                 <div className="links">
                                     <div className="link">
-                                        <a href='https://www.linkedin.com/in/mahir-faisal/'><img className='contact-img' src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
+                                        <a href={`https://www.linkedin.com/in/mahir-faisal/`} target="_blank" rel="noopener noreferrer"><img className='contact-img' src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
                                     </div>
                                     <div className="link">
-                                        <a href='https://github.com/mdmahirfaisal'><img className='contact-img' src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
+                                        <a href={`https://github.com/mdmahirfaisal`} target="_blank" rel="noopener noreferrer"><img className='contact-img' src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
                                     </div>
                                     <div className="link">
-                                        <a href='https://www.facebook.com/profile.php?id=100069936932811'><img className='contact-img' src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" alt="codepen" /></a>
+                                        <a href={`https://www.facebook.com/profile.php?id=100069936932811`} target="_blank" rel="noopener noreferrer"><img className='contact-img' src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" alt="Fb icon" /></a>
                                     </div>
                                     <div className="link">
-                                        <a href='mailto:rjmahir.faisal@gmail.com?subject=SendMail&body=Description'><img className='contact-img' src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rjmahir.faisal@gmail.com" target="_blank" rel='noreferrer'><img className='contact-img' src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -57,15 +91,15 @@ const Contact = () => {
                         <Fade right duration={2500} distance="50px">
                             <div className="contact-form-wrapper bg-light">
                                 <h5 className='text-secondary text-center fw-bold'>SEND YOUR MESSAGE</h5>
-                                <form onSubmit={handleSubmit}>
+                                <form ref={form} onSubmit={handleSubmit}>
                                     <div className="form-item">
-                                        <TextField className="w-100 mb-2" variant="standard" label='Enter Your Name' type="text" name="sender" required />
+                                        <TextField className="w-100 mb-2" variant="standard" label='Enter Your Name' type="text" name="client-name" required />
                                     </div>
                                     <div className="form-item">
                                         <TextField className="w-100 mb-4" variant="standard" label='Enter Your Email' type="email" name="email" required />
                                     </div>
                                     <div className="form-item">
-                                        <TextareaAutosize style={{ width: '100%', padding: '5px' }} className="" label='Enter Your Message' placeholder='Enter Your Message' minRows={5} className="" name="message" required></TextareaAutosize>
+                                        <TextareaAutosize style={{ width: '100%', padding: '5px' }} className="" label='Enter Your Message' placeholder='Enter Your Message' minRows={5} name="message" required></TextareaAutosize>
                                     </div>
                                     <button type='submit' className="submit-btn">Send</button>
                                 </form>

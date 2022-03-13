@@ -23,7 +23,7 @@ const Navigation = () => {
 
     return (
         <>
-            <header className="">
+            <header >
                 <Navbar
                     collapseOnSelect
                     expand="lg"
@@ -33,7 +33,6 @@ const Navigation = () => {
                     <Container>
                         <Navbar.Brand
                             as={HashLink} to="/"
-                            className=""
                             style={{ color: "#3a4256", fontSize: "1rem" }}>
 
                             <strong className='text-light'>Mahir Faisal</strong>
@@ -41,24 +40,24 @@ const Navigation = () => {
                         <Nav>
                             <a href="#;" className="ic menu" tabIndex="1">
                                 <span className="line"></span>
-                                <span className="line "></span>
-                                <span className="line "></span>
+                                <span className="line"></span>
+                                <span className="line"></span>
                             </a>
                             <Nav.Link href="" className="ic close"></Nav.Link>
                             <ul className="main-nav">
                                 <li className="top-level-link">
 
-                                    <HashLink to="/home#home" className='mega-menu text-decoration-none text-light'><span>Home</span></HashLink>
+                                    <HashLink to="/home#home" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Home</span></HashLink>
                                     <div className="sub-menu-block">
                                         <div className="row">
                                             <div className="col">
-                                                <h2 className="sub-menu-head text-light">Home</h2>
-                                                <ul className="sub-menu-lists">
-                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#home">Home</Nav.Link></li>
-                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#about">About</Nav.Link></li>
-                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#projects">Projects</Nav.Link></li>
-                                                    <li className='text-light'><Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link></li>
-                                                    <li className='text-light'><Nav.Link as={HashLink} to="/blogs">Blogs</Nav.Link></li>
+                                                <h2 className="sub-menu-head text-dark text-center">Home</h2>
+                                                <ul className="sub-menu-lists text-center">
+                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#home">Home</Nav.Link></li>
+                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#about">About</Nav.Link></li>
+                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#projects">Projects</Nav.Link></li>
+                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link></li>
+                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/blogs">Blogs</Nav.Link></li>
                                                 </ul>
                                             </div>
 
@@ -68,12 +67,13 @@ const Navigation = () => {
                                 </li>
 
                                 <li className="top-level-link">
-                                    <HashLink to="/home#projects" className='mega-menu text-decoration-none text-light'><span>Projects</span></HashLink>
+                                    <HashLink to="/home#projects" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Projects</span></HashLink>
                                     <div className="sub-menu-block">
                                         <div className="row">
-                                            <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head text-light ">Projects</h2>
-                                                <ul className="sub-menu-lists ">
+                                            <div className="col">
+                                                <h2 className="sub-menu-head text-dark  text-center">Live demo</h2>
+                                                <ul className="sub-menu-lists text-center">
+                                                    <li><Nav.Link href='https://ajker-barta.vercel.app/'>Ajker Barta <small>(team project)</small> </Nav.Link></li>
                                                     <li><Nav.Link href='https://smart-mobile-bazar.web.app/'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://super-car-shop.web.app/'>Car Shop</Nav.Link></li>
                                                     <li><Nav.Link href='https://water-delivery-b84a1.web.app/'>Water Delivery</Nav.Link></li>
@@ -81,24 +81,15 @@ const Navigation = () => {
                                                     <li><Nav.Link href='https://medical-care-center.web.app/'>Medical Care</Nav.Link></li>
                                                 </ul>
                                             </div>
-                                            <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head text-light">Client Code</h2>
-                                                <ul className="sub-menu-lists">
+                                            <div className="col">
+                                                <h2 className="sub-menu-head text-dark text-center">Github</h2>
+                                                <ul className="sub-menu-lists text-center">
+                                                    <li><Nav.Link href='https://github.com/emranhossain-wdd/ajker-barta/tree/mahir_faisal'>Ajker Barta</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Mobile-bazar'>Mobile Bazar</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Car-shop'>Car Shop</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Water-delivery'>Water Delivery</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/New-Star-Restaurant'>Restaurant</Nav.Link></li>
                                                     <li><Nav.Link href='https://github.com/mdmahirfaisal/Medical-care-center'>Medical Care</Nav.Link></li>
-                                                </ul>
-                                            </div>
-                                            <div className="col-md-4 col-lg-4 col-sm-4">
-                                                <h2 className="sub-menu-head text-light">Backend Code</h2>
-                                                <ul className="sub-menu-lists">
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Mobile-bazar-server'>Mobile Bazar</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Car-shop-server'>Car Shop</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Water-delivery-server'>Water Delivery</Nav.Link></li>
-                                                    <li><Nav.Link>Restaurant</Nav.Link></li>
-                                                    <li><Nav.Link>Medical Care</Nav.Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -107,13 +98,13 @@ const Navigation = () => {
                                 </li>
 
                                 <li className="top-level-link">
-                                    <HashLink to="/home#about" className='sub-menu text-decoration-none text-light'><span>About</span></HashLink>
+                                    <HashLink to="/home#about" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>About</span></HashLink>
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/home#contact" className='sub-menu text-decoration-none text-light'><span>Contact</span></HashLink>
+                                    <HashLink to="/home#contact" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Contact</span></HashLink>
                                 </li>
                                 <li className="top-level-link">
-                                    <HashLink to="/blogs" className='sub-menu text-decoration-none text-light'><span>Blogs</span></HashLink>
+                                    <HashLink to="/blogs" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Blogs</span></HashLink>
                                 </li>
                             </ul>
                         </Nav>

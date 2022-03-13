@@ -4,7 +4,6 @@
 
 
 #contact {
-  /* background-color: #6a9ac4; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +23,7 @@
 }
 
 .contact-links {
-  background-color: #1f2e43;
+  background-color: #ffffff;
   background: radial-gradient(
       circle at 55% 92%,
       #426691 0 12%,
@@ -89,10 +88,10 @@
 }
 
 .contact-img {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #0006);
-  transition: 0.2s;
+  transition: all 0.4s;
   user-select: none;
 }
 
@@ -108,13 +107,11 @@
 .form-item {
   position: relative;
 }
-
 label,
 input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
-
 .submit-btn {
   background-color: #fd917e;
   filter: drop-shadow(2px 2px 3px #0003);
@@ -131,34 +128,28 @@ textarea {
   user-select: none;
   transition: 0.2s;
 }
-
 .submit-btn:hover {
   transform: scale(1.1, 1.1);
 }
-
 .submit-btn:active {
   transform: scale(1.1, 1.1);
   filter: sepia(0.5);
 }
-
 @media only screen and (max-width: 800px) {
   .contact-h2 {
     font-size: clamp(40px, 10vw, 60px);
   }
 }
-
 @media only screen and (max-width: 400px) {
   .contact-h2 {
     font-size: clamp(30px, 12vw, 60px);
   }
-
   .links {
     padding-top: 30px;
   }
-
   .contact-img {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
   }
 }
 

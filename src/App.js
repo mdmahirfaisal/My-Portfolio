@@ -17,11 +17,7 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        {/* <div className="col-md-2 " style={{}}>
-
-        </div> */}
-
-        <div className="">
+        <div>
           <Router>
             <Navigation></Navigation>
             <Switch>
