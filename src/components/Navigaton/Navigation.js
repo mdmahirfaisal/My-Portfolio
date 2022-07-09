@@ -44,73 +44,25 @@ const Navigation = () => {
                                 <span className="line"></span>
                             </a>
                             <Nav.Link href="" className="ic close"></Nav.Link>
+
+
+
                             <ul className="main-nav">
-                                <li className="top-level-link">
-
-                                    <HashLink to="/home#home" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Home</span></HashLink>
-                                    <div className="sub-menu-block">
-                                        <div className="row">
-                                            <div className="col">
-                                                <h2 className="sub-menu-head text-dark text-center">Home</h2>
-                                                <ul className="sub-menu-lists text-center">
-                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#home">Home</Nav.Link></li>
-                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#about">About</Nav.Link></li>
-                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#projects">Projects</Nav.Link></li>
-                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link></li>
-                                                    <li className='text-dark'><Nav.Link as={HashLink} to="/blogs">Blogs</Nav.Link></li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </li>
-
-                                <li className="top-level-link">
-                                    <HashLink to="/home#projects" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Projects</span></HashLink>
-                                    <div className="sub-menu-block">
-                                        <div className="row">
-                                            <div className="col">
-                                                <h2 className="sub-menu-head text-dark  text-center">Live demo</h2>
-                                                <ul className="sub-menu-lists text-center">
-                                                    <li><Nav.Link href='https://ajker-barta.vercel.app/'>Ajker Barta <small>(team project)</small> </Nav.Link></li>
-                                                    <li><Nav.Link href='https://smart-mobile-bazar.web.app/'>Mobile Bazar</Nav.Link></li>
-                                                    <li><Nav.Link href='https://super-car-shop.web.app/'>Car Shop</Nav.Link></li>
-                                                    <li><Nav.Link href='https://water-delivery-b84a1.web.app/'>Water Delivery</Nav.Link></li>
-                                                    <li><Nav.Link href='https://new-star-restuarant.netlify.app/'>Restaurant</Nav.Link></li>
-                                                    <li><Nav.Link href='https://medical-care-center.web.app/'>Medical Care</Nav.Link></li>
-                                                </ul>
-                                            </div>
-                                            <div className="col">
-                                                <h2 className="sub-menu-head text-dark text-center">Github</h2>
-                                                <ul className="sub-menu-lists text-center">
-                                                    <li><Nav.Link href='https://github.com/emranhossain-wdd/ajker-barta/tree/mahir_faisal'>Ajker Barta</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Mobile-bazar'>Mobile Bazar</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Car-shop'>Car Shop</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Water-delivery'>Water Delivery</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/New-Star-Restaurant'>Restaurant</Nav.Link></li>
-                                                    <li><Nav.Link href='https://github.com/mdmahirfaisal/Medical-care-center'>Medical Care</Nav.Link></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </li>
-
-                                <li className="top-level-link">
-                                    <HashLink to="/home#about" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>About</span></HashLink>
-                                </li>
-                                <li className="top-level-link">
-                                    <HashLink to="/home#contact" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Contact</span></HashLink>
-                                </li>
-                                <li className="top-level-link">
-                                    <HashLink to="/blogs" className={isMobile ? 'mega-menu text-decoration-none text-dark' : 'mega-menu text-decoration-none text-light'}><span>Blogs</span></HashLink>
-                                </li>
+                                <h1 className="text-center mt-5">
+                                    <img style={{ width: '120px', height: '120px', borderRadius: '50%', }} src="https://i.ibb.co/QHXv4xy/Mahir-Faisla.jpg" alt="Faisal" />
+                                </h1>
+                                <div className="navLink text-center d-flex flex-column">
+                                    <Nav.Link className='text-light fs-3' as={HashLink} to="/home#home">Home</Nav.Link>
+                                    <Nav.Link className='text-light fs-3' as={HashLink} to="/home#about">About</Nav.Link>
+                                    <Nav.Link className='text-light fs-3' as={HashLink} to="/home#projects">Projects</Nav.Link>
+                                    <Nav.Link className='text-light fs-3' as={HashLink} to="/home#contact">Contact</Nav.Link>
+                                    <Nav.Link className='text-light fs-3' as={HashLink} to="/blogs">Blogs</Nav.Link>
+                                </div>
                             </ul>
                         </Nav>
 
                         <Nav className='ms-auto'>
-                            {!isMobile && <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-dark py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>}
+                            <Nav.Link className="fs-5 ms-2" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className={isSticky ? "btn btn-dark py-1 w-100" : "btn btn-danger py-1 w-100"}>Resume</button></Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>

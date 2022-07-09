@@ -34,14 +34,6 @@ const About = () => {
 
                                         <h5 className='my-0 py-0 text-danger'>Tools</h5>
                                         <p> VS Code, Git, Chrome Dev Tool, Npm & Yarn,  Firebase, Netlify, Heroku </p>
-
-
-
-
-
-
-                                        {/*                                         
-                                        <Nav.Link className="fs-5" as="a" href={`https://drive.google.com/file/d/1IWDXgsTltXLd81c202tLphDiYI-JgIIW/view?usp=sharing`} target="_blank" rel="noopener noreferrer"><button className="btn btn-danger py-1 ">Resume</button></Nav.Link> */}
                                     </div>
                                 </div>
                             </Fade>

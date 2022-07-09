@@ -39,12 +39,13 @@ const Home = () => {
 
 
     return (
-        <div id="home" className="home-background">
+        <div className="home-">
             <Banner></Banner>
             <About></About>
             <Projects></Projects>
             <Contact></Contact>
             <Footer></Footer>
+
             <ParticlesBg color="#b33939" num={170} type="cobweb" config={config} bg={true} />
         </div>
     );
